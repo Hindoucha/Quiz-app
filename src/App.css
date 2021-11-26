@@ -1,38 +1,70 @@
+html,
+body,
+#root {
+  height: 100vh; /* 100% */
+}
+
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App .card {
+  max-width: 30vw;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label.radio {
+  display: block;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 5px;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+label.radio+.radio { /*same start point vertically with the adjacent sibling*/
+  margin-left: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+label.radio input {
+  margin-right: 10px;
+}
+
+
+.field>label {
+  display: block;
+  text-align: left;
+}
+
+.login-error-msg {
+  display: block;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.admin {
+  height: 100vh;
+  width: 100%;
+}
+
+.light-green {
+  background-color: rgb(168, 221, 168);
+}
+
+.admin-content {
+  width: 80%;
+  margin: auto;
+}
+
+.tabs{
+  background-color:#001d3d;
+  margin-top: -5px;
+}
+
+.tabs ul li a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
